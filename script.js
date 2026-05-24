@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const groupNumber = document.getElementById('groupNumber');
     const serverAddress = document.getElementById('serverAddress');
     const toast = document.getElementById('toast');
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+    const galleryImages = document.querySelectorAll('.gallery-image');
     
     // 通用复制函数
     function copyText(element, button) {
@@ -91,5 +95,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 button.click();
             }
         });
+    });
+    
+    // 图片预览功能
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modalImage.src = this.src;
+            imageModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+        });
+        
+        // 添加无障碍支持
+        img.setAttribute('role', 'button');
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('aria-label', '查看大图: ' + (this.alt || '服务器截图'));
+        
+        // 支持键盘操作
+        img.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+    
+    // 关闭模态框
+    closeModal.addEventListener('click', function() {
+        imageModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // 恢复背景滚动
+    });
+    
+    // 点击模态框外部关闭
+    imageModal.addEventListener('click', function(e) {
+        if (e.target === imageModal) {
+            imageModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // ESC键关闭模态框
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && imageModal.style.display === 'block') {
+            imageModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     });
 });
