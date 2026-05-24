@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的世界暮色机械服</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部标题区 -->
+        <header class="header">
+            <h1>我的世界暮色机械服</h1>
+            <p class="subtitle">欢迎加入我们的服务器</p>
+        </header>
+
+        <!-- 服务器信息展示区 -->
+        <main class="main-content">
+            <!-- 服务器图标展示模块 -->
+            <section class="server-icon-section">
+                <h2>服务器图标</h2>
+                <div class="icon-container">
+                    <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/18adde2f3cb043aea5f0801815e520de.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260524185445365DA87D31956AD88079&rrcfp=8a172a1a&x-expires=1780224886&x-signature=0cfqxCLQF0es6TGP8Q4Pl2%2Brr2M%3D" alt="暮色机械服图标" class="server-icon">
+                </div>
+                <p class="server-description">暮色森林与机械动力的完美结合，创造无限可能</p>
+            </section>
+
+            <!-- QQ群信息展示模块 -->
+            <section class="qq-group-section">
+                <h2>加入我们</h2>
+                <div class="qq-container">
+                    <div class="qrcode-container">
+                        <img src="https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/71eefa6b3bc04422b2c396f53bb40c10.jpg~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&rcl=20260524185445365DA87D31956AD88079&rrcfp=8a172a1a&x-expires=1780224886&x-signature=CQX360QLyuPV4eU106fOUfxo3tM%3D" alt="QQ群二维码" class="qrcode">
+                        <p class="qrcode-hint">扫码加入QQ群</p>
+                    </div>
+                    <div class="group-info">
+                        <p class="group-label">QQ群号：</p>
+                        <div class="group-number-container">
+                            <span class="group-number" id="groupNumber">1038478019</span>
+                            <button class="copy-button" id="copyButton" aria-label="复制QQ群号">
+                                <i class="fas fa-copy"></i>
+                                <span class="copy-text">复制</span>
+                            </button>
+                        </div>
+                        <p class="group-label mt-4">服务器地址：</p>
+                        <div class="group-number-container">
+                            <span class="group-number" id="serverAddress">w8mss.aternos.me</span>
+                            <button class="copy-button" id="copyAddressButton" aria-label="复制服务器地址">
+                                <i class="fas fa-copy"></i>
+                                <span class="copy-text">复制</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部说明区 -->
+        <footer class="footer">
+            <p>© 2023 我的世界暮色机械服 - 保留所有权利</p>
+        </footer>
+    </div>
+
+    <!-- 复制成功提示 -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>复制成功！</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
