@@ -70,6 +70,13 @@ body::before {
 .subtitle {
     font-size: 1.2rem;
     color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.owner {
+    font-size: 1.1rem;
+    color: #93c5fd;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -444,6 +451,8 @@ body::before {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+
 
 /* 底部说明区 */
 .footer {
